@@ -289,3 +289,99 @@ Pastikan bucket `avatars` sudah dibuat sebagai **public** dan policy storage sud
 **Build Android gagal**
 
 Pastikan `minSdk = 21` dan `coreLibraryDesugaring` sudah ditambahkan di `build.gradle.kts`.
+
+---
+
+## Widget yang Digunakan
+
+| Widget | Kegunaan |
+|---|---|
+| `MaterialApp` | Root aplikasi, konfigurasi tema dan routing |
+| `AnimatedTheme` | Transisi smooth saat pergantian tema |
+| `Scaffold` | Struktur dasar halaman (AppBar, body, FAB) |
+| `AppBar` | Header halaman dengan judul dan action button |
+| `SliverAppBar` | AppBar yang bisa collapse saat scroll (Inbox) |
+| `NestedScrollView` | Scroll koordinasi antara AppBar dan list |
+| `NavigationBar` | Bottom navigation bar dengan 4 tab |
+| `IndexedStack` | Menjaga state tiap tab saat berpindah |
+| `DraggableScrollableSheet` | Bottom sheet yang bisa digeser naik/turun |
+| `ListView.builder` | Daftar tugas yang dirender secara efisien |
+| `Card` | Komponen kartu untuk setiap tugas |
+| `InkWell` | Efek ripple saat kartu ditekan |
+| `FloatingActionButton` | Tombol tambah tugas di halaman Inbox |
+| `TextFormField` | Input field dengan validasi (judul, deskripsi, dll) |
+| `Form` | Wrapper validasi form tambah/edit tugas |
+| `DatePicker` | Dialog pemilihan tanggal deadline |
+| `AlertDialog` | Dialog konfirmasi sebelum hapus tugas |
+| `SnackBar` | Notifikasi floating setelah aksi CRUD |
+| `CircleAvatar` | Menampilkan foto profil user |
+| `Stack` | Menumpuk widget (badge di atas icon, foto + overlay) |
+| `LinearProgressIndicator` | Progress bar tugas selesai di halaman Hari Ini |
+| `RefreshIndicator` | Pull-to-refresh untuk memuat ulang data |
+| `TableCalendar` | Kalender interaktif dengan penanda deadline |
+| `StreamBuilder` | Mendengarkan perubahan state autentikasi Supabase |
+| `ChangeNotifierProvider` | State management dengan Provider pattern |
+| `Consumer` / `context.watch` | Reaktif terhadap perubahan state provider |
+| `AnimatedContainer` | Animasi perubahan tampilan pilihan prioritas/tema |
+| `Badge` | Indikator merah jumlah tugas hari ini di tab Lainnya |
+| `GestureDetector` | Deteksi tap pada elemen non-button |
+| `SingleChildScrollView` | Scroll pada halaman form dan detail |
+| `Image` / `NetworkImage` | Menampilkan foto profil dari URL Supabase Storage |
+
+---
+
+## Coba Aplikasi Ini
+
+Ingin mencoba langsung tanpa setup? Ikuti langkah berikut:
+
+### Download APK
+1. Buka halaman [Releases](../../releases) di repository ini
+2. Download file `app-arm64-v8a-release.apk` (untuk HP Android 2018 ke atas)
+3. Izinkan instalasi dari sumber tidak dikenal di HP kamu:
+   - Buka **Pengaturan** → **Keamanan** → aktifkan **Install unknown apps**
+4. Install dan buka aplikasi
+
+### Buat Akun
+1. Tap **"Daftar"** di halaman awal
+2. Masukkan email dan password (minimal 6 karakter)
+3. Langsung login — tidak perlu konfirmasi email
+
+### Mulai Gunakan
+- Tap **+ Tambah** untuk membuat tugas pertama kamu
+- Isi judul, deskripsi, deadline, dan pilih prioritas
+- Jelajahi tab **Kalender** untuk melihat jadwal
+- Tap **Lainnya** untuk akses Hari Ini, Mendatang, dan Arsip
+- Buka **Profil** untuk mengubah foto, username, dan tema tampilan
+
+### Catatan
+- Aplikasi membutuhkan koneksi internet untuk sinkronisasi data
+- Data tersimpan di cloud — bisa diakses dari perangkat mana saja dengan akun yang sama
+- Notifikasi pengingat akan muncul otomatis H-3, H-2, dan H-1 sebelum deadline
+
+---
+
+## Lisensi
+
+```
+MIT License
+
+Copyright (c) 2026 rai269
+
+Permission is hereby granted, free of charge, to any person obtaining a copy
+of this software and associated documentation files (the "Software"), to deal
+in the Software without restriction, including without limitation the rights
+to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+copies of the Software, and to permit persons to whom the Software is
+furnished to do so, subject to the following conditions:
+
+The above copyright notice and this permission notice shall be included in all
+copies or substantial portions of the Software.
+
+THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
+SOFTWARE.
+```
